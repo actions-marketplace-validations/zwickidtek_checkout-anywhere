@@ -118,5 +118,13 @@ export function getInputs(): IGitSourceSettings {
   result.persistCredentials =
     (core.getInput('persist-credentials') || 'false').toUpperCase() === 'TRUE'
 
+  //
+
+  // retry options
+  result.retryMaxAttempts = Number(core.getInput('retry-max-attempts'))
+  result.retryMinSeconds = Number(core.getInput('retry-min-seconds'))
+  result.retryMaxSeconds = Number(core.getInput('retry-max-seconds'))
+  //
+
   return result
 }

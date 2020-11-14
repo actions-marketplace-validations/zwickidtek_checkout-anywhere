@@ -73,4 +73,19 @@ export interface IGitSourceSettings {
    * Indicates whether to persist the credentials on disk to enable scripting authenticated git commands
    */
   persistCredentials: boolean
+
+  /**
+   * Indicates how many attempts for checkout
+   */
+  retryMaxAttempts: number
+
+  /**
+   * Indicates min seconds waiting for the next try for checkout
+   */
+  retryMinSeconds: number
+
+  /**
+   * Indicates max seconds waiting for the next try for checkout
+   */
+  retryMaxSeconds: number
 }

@@ -1,8 +1,10 @@
 import * as core from '@actions/core'
+import * as inputHelper from './input-helper'
 
-const defaultMaxAttempts = 3
-const defaultMinSeconds = 10
-const defaultMaxSeconds = 20
+const inputs = inputHelper.getInputs()
+const defaultMaxAttempts = inputs.retryMaxAttempts || 3
+const defaultMinSeconds = inputs.retryMinSeconds || 10
+const defaultMaxSeconds = inputs.retryMaxSeconds || 20
 
 export class RetryHelper {
   private maxAttempts: number
