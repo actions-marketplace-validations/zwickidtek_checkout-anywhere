@@ -105,6 +105,18 @@ Refer [here](https://github.com/actions/checkout/blob/v1/README.md) for previous
     #
     # Default: false
     submodules: ''
+
+    # Indicates how many attempts for checkout
+    # Default: 3
+    retry-max-attempts: ''
+
+    # Indicates min seconds waiting for the next try for checkout
+    # Default: 10
+    retry-min-seconds: ''
+
+    # Indicates max seconds waiting for the next try for checkout
+    # Default: 20
+    retry-max-seconds: ''
 ```
 <!-- end usage -->
 

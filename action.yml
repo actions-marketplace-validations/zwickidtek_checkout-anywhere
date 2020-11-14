@@ -68,6 +68,16 @@ inputs:
       When the `ssh-key` input is not provided, SSH URLs beginning with `git@github.com:` are
       converted to HTTPS.
     default: false
+  retry-max-attempts:
+    description: 'Indicates how many attempts for checkout'
+    default: 3
+  retry-min-seconds:
+    description: 'Indicates min seconds waiting for the next try for checkout'
+    default: 10
+  retry-max-seconds:
+    description: 'Indicates max seconds waiting for the next try for checkout'
+    default: 20
+
 runs:
   using: node12
   main: dist/index.js
