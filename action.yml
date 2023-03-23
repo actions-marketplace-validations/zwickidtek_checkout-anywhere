@@ -1,4 +1,4 @@
-name: 'Checkout Anywhere'
+name: 'Checkout-Anywhere-Ignore-Error'
 description: 'Checkout a Git repository at a particular version'
 inputs:
   repository:
